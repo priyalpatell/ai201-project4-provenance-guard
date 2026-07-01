@@ -152,10 +152,10 @@ The submission flow processes user text through two distinct signal to calculate
 # AI Tool Plan
 
 M3 (submission endpoint + first signal):
-I will give Gemini the Multi-signal Detection Pipeline, API Endpoints, and Architecture Submit Flow and ask it to generate the flask app skeleton in app.py with submit endpoint and the first signal function in signal.py. I will verify by calling the signal function with various inputs of human and AI-generated text and seeing how the model performs and if the correct output is being returned. Will make updates the function accordingly.
+I will give Gemini the Multi-signal Detection Pipeline, API Endpoints, and Architecture Submit Flow and ask it to generate the flask app skeleton in app.py with submit endpoint and the first signal function in signals.py. I will verify by calling the signal function with various inputs of human and AI-generated text and seeing how the model performs and if the correct output is being returned. Will make updates the function accordingly.
 
 M4 (second signal + confidence scoring):
-I will give Gemini Multi-signal Detection Pipeline, API Endpoints, Confidence Score with Uncertainty, and Architecture Submit Flow and ask it to generate the second signal function in signal.py and scoring logic in utils.py outlined in the submit endpoint function. I will pass in text that is clearly AI or human text and see how the metric calculations perform and will make adjustments based on testing.
+I will give Gemini Multi-signal Detection Pipeline, API Endpoints, Confidence Score with Uncertainty, and Architecture Submit Flow and ask it to generate the second signal function in signals.py and scoring logic in utils.py outlined in the submit endpoint function. I will pass in text that is clearly AI or human text and see how the metric calculations perform and will make adjustments based on testing.
 
-M5 (production layer): Which spec sections you'll provide (label variants + appeals workflow + diagram), what you'll ask for (label generation logic + the /appeal endpoint), and how you'll verify (test all three label variants are reachable and that an appeal updates status correctly).
+M5 (production layer):
 I will give Gemini Transparency Label Design, Appeals Workflow, API Endpoints, Audit Log, and Architecture Appeal Flow and ask it to generate the label generation logic in utils.py and add to app.py the appeal endpoint. I will test the label generation to check the labels created are relevant and contain the key information with different input texts. I will check the appeal endpoint is working by calling the get log endpoint to check the appeal has been added.
